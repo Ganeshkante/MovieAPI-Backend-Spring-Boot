@@ -169,7 +169,8 @@ public class MovieServiceImpl implements MovieService {
         String posterUrl = baseUrl + "/file/" + fileName;
 
         // 7. map to MovieDto and return it
-        MovieDto response = new MovieDto(
+
+        return new MovieDto(
                 movie.getMovieId(),
                 movie.getTitle(),
                 movie.getDirector(),
@@ -179,8 +180,6 @@ public class MovieServiceImpl implements MovieService {
                 movie.getPoster(),
                 posterUrl
         );
-
-        return response;
     }
 
     @Override
